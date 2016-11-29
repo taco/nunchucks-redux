@@ -1,0 +1,40 @@
+{
+  "name": "nunjucks-redux",
+  "version": "1.0.0",
+  "description": "Sample of nunjucks templates driven by redux",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "start": "node ./app/index.js",
+    "dist": "webpack -p --config webpack.config.dist.js",
+    "hot": "webpack-dev-server --hot --inline --config webpack.config.hot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taco/nunjucks-redux.git"
+  },
+  "keywords": [
+    "nunjucks",
+    "redux"
+  ],
+  "author": "Travis Johnson <tvjohnson@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taco/nunjucks-redux/issues"
+  },
+  "homepage": "https://github.com/taco/nunjucks-redux#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-latest": "^6.16.0",
+    "nunjucks": "^3.0.0",
+    "nunjucks-loader": "^2.4.5",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.12"
+  }
+}
