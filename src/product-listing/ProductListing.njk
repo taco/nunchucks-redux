@@ -1,20 +1,22 @@
-<h1>
-    Products
-</h1>
-
-<form id="add">
-    <input type="text" name="Name" placeholder="Name"/>
-    <input type="text" name="Code" placeholder="Code"/>
-    <button type="submit">Add</button>
-</form>
-
 <div>
-    {% for item in items %}
-        <div>
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.code }}</p>
-        </div>
-    {% else %}
-        No results
-    {% endfor %}
+    <h1>
+        Products
+    </h1>
+
+    <form id="add">
+        <input type="text" name="Name" placeholder="Name"/>
+        <input type="text" name="Code" placeholder="Code"/>
+        <button type="submit">Add</button>
+    </form>
+
+    <div>
+        {% for item in items %}
+            <div>
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.code }}</p>
+            </div>
+        {% else %}
+            No results
+        {% endfor %}
+    </div>
 </div>

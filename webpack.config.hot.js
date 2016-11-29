@@ -15,7 +15,7 @@ module.exports = {
         path: path.join(__dirname, 'dist/'),
         filename: 'bundle.js',
         sourceMapFilename: 'debugging/[file].map',
-        publicPath: 'http://localhost:8080/'
+        publicPath: 'http://localhost:9000/'
     },
     target: 'web',
     node: {
@@ -29,7 +29,12 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+            {
                 test: /\.(njk|nunjucks)$/,
+                exclude: /node_modules/,
                 loader: 'nunjucks-loader'
             }
         ]

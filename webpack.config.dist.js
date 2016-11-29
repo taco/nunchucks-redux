@@ -22,6 +22,7 @@ module.exports = {
             },
             {
                 test: /\.(njk|nunjucks)$/,
+                exclude: /node_modules/,
                 loader: 'nunjucks-loader'
             }
         ]
