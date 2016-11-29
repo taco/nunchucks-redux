@@ -1,18 +1,28 @@
 import { ProductListing } from './product-listing';
 
-document.addEventListener("DOMContentLoaded", () => {
+import $ from 'jquery';
+
+import store from './store';
+import { addProduct } from './actions';
+
+$(() => {
+    render();
+});
+
+const handleSubmit = e => {
+    e.preventDefault();
+    const [name, code] = $(e.target).serializeArray();
+
+    store.dispatch(addProduct(name.value, code.value));
+    render();
+}
+
+const render = () => {
     const html = ProductListing.render({
-        items: [
-            {
-                name: 'Thing 1',
-                code: 'thing-1'
-            },
-            {
-                name: 'Food 2',
-                code: 'food-2'
-            }
-        ]
+        items: store.getState().products
     });
 
-    document.getElementById('mount').innerHTML = html;
-});
+    $('#mount').html(html);
+
+    $('#add').on('submit', handleSubmit);
+};

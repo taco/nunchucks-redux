@@ -25,6 +25,7 @@
   "homepage": "https://github.com/taco/nunjucks-redux#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "jquery": "^3.1.1",
     "pug": "^2.0.0-beta6",
     "redux": "^3.6.0"
   },
