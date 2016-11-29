@@ -1,0 +1,14 @@
+<h1>
+    Products
+</h1>
+
+<div>
+    {% for item in items %}
+        <div>
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.code }}</p>
+        </div>
+    {% else %}
+        No results
+    {% endfor %}
+</div>
